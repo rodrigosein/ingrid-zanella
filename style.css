@@ -3,6 +3,24 @@ html {
     top: 0px;
     padding-top: 0%;
   }
+
+/* Estilo padrão para o fundo em telas desktop */
+body {
+  background-image: url('./assets/Bg-Desktop-1920x1080px.jpg'); /* Imagem para desktop (formato horizontal) */
+  background-size: cover; /* Ajusta a imagem para cobrir toda a área visível */
+  background-position: center center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete a imagem */
+}
+
+/* Estilo para dispositivos móveis (com largura até 768px) */
+@media (max-width: 768px) {
+  body {
+    background-image: url('./assets/Bg-Ingrid-1080x1920.png'); /* Imagem para mobile (formato vertical) */
+    background-size: cover; /* Ajusta a imagem para cobrir a tela */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+  }
+}  
   
   .titulo {
     color: white;
