@@ -384,11 +384,30 @@ html {
     z-index: 1000;
   }
   
+/* Centraliza e aumenta a imagem além de 100% da tela */
+.imagem-ampliada {
+  width: 20vw; /* Faz com que a largura seja 120% da largura da viewport */
+  height: auto; /* Mantém a proporção automática */
+  max-width: none; /* Remove o limite máximo de largura */
+  max-height: none; /* Remove o limite máximo de altura */
+
+
+  transition: transform 0.3s ease; /* Animação suave de transformação */
+  transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% ao carregar */
+}
+
+/* No hover, aumenta ainda mais a imagem */
+.imagem-ampliada:hover {
+  transform: scale(1.2); /* Aumenta a imagem para 120% quando o mouse passa por cima */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
   .imagem-ampliada {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
+    width: 80vw; /* Em telas pequenas, a largura será igual à viewport */
+    transform: scale(1); /* Remove o zoom inicial */
   }
+}
   .card-content {
     position: relative;
     width: 350px;
